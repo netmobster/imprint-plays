@@ -70,7 +70,11 @@ gears/
 
 ## Install
 
-See [INSTALL.md](INSTALL.md) for step-by-step setup in SelfActual or generic Claude.
+**SelfActual users:** download [`gears/imprint-plays-installer.md`](gears/imprint-plays-installer.md), paste it into Imprint, say "install imprint plays." All 13 vault documents created automatically.
+
+**Generic Claude:** paste [`gears/imprint-games.md`](gears/imprint-games.md) into any Claude conversation and say "imprint plays." No vault needed — runs in pure chaos mode.
+
+See [INSTALL.md](INSTALL.md) for details.
 
 ## Testing & feedback
 

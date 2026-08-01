@@ -1,57 +1,26 @@
 # Installing Imprint Plays
 
-Two paths depending on your setup.
-
 ---
 
 ## Option A — SelfActual vault (recommended)
 
-You'll create each gear file as a personal vault document. These stay in YOUR vault — they don't touch any shared product pod.
-
-### What you need
-
-- A SelfActual account with an active Imprint session
-- The `create_document` tool available via the SelfActual MCP connector
+One file. One command. Done.
 
 ### Steps
 
-For each `.md` file in `gears/`, run `create_document` with:
+1. Download `gears/imprint-plays-installer.md` from this repo
+2. Paste the contents into a new Imprint session
+3. Say: **"install imprint plays"**
+4. Imprint creates all 13 vault documents automatically and reports progress
+5. When done, say **"imprint plays"** to launch the game menu
 
-```
-username:  your-vault-username
-slug:      [filename without .md — e.g. "imprint-games"]
-title:     [from the frontmatter title field]
-content:   [full file content, including frontmatter]
-docType:   "reference"
-tags:      ["imprint-plays", "gear", "game"]   ← or "wrapper" / "manifest" as appropriate
-```
-
-**Install order matters:** install the 10 game gears first, then the manifest, then the wrapper.
-
-```
-1. plays-word-association
-2. plays-two-truths
-3. plays-would-you-rather
-4. plays-rank-these
-5. plays-aita
-6. plays-desert-island
-7. plays-story-chain
-8. plays-guess-imprint-thinks
-9. plays-young-name
-10. plays-mad-libs
-11. imprint-plays-manifest
-12. imprint-games
-```
-
-### Verify
-
-Open a new Imprint session and say `imprint plays`. You should see the menu with all 10 games.
+That's it. No manual steps, no slugs, no create_document calls.
 
 ---
 
 ## Option B — Generic Claude (no SelfActual account)
 
-Paste the gear files directly into Claude's context. No vault, no setup, no slugs.
+No vault, no setup. Paste and play.
 
 ### Steps
 
@@ -70,14 +39,12 @@ Thin profile = more fun, not less. Try it.
 
 ## Updating a gear
 
-If a gear gets updated, re-run `create_document` with the new content. The slug stays the same — it replaces in place.
+Re-paste the updated installer and say "install imprint plays" again — it overwrites in place.
 
-Or if you're using the generic Claude path: just paste the updated `.md` file.
+Or for a single gear: paste just that `.md` file into Imprint and say "update this vault document."
 
 ---
 
-## Removing a game
+## Troubleshooting
 
-Delete the vault document with `delete_document` using the slug. Update `imprint-plays-manifest` to remove it from the active list.
-
-Don't delete retired games from the manifest — they live in the Retired table for reference.
+If the installer fails on any documents, Imprint will tell you which ones. Re-run just those by pasting the individual gear file and saying "create this vault document."
